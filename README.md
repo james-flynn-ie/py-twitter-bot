@@ -1,7 +1,7 @@
 This is a Work-In-Progress. Check back soon to see the finished article.
 
 # py-twitter-bot
-Twitter bot to follow new followers, using Tweepy API.
+Twitter bot to follow new followers, using [Tweepy](https://github.com/tweepy/Tweepy), a Twitter API Wrapper written in Python.
 
 * Create a Twitter Developer's Account: [https://developer.twitter.com/en/apply-for-access](https://developer.twitter.com/en/apply-for-access) 
 * Create an App in your Twitter Developer's account.
