@@ -14,7 +14,7 @@ The bot automatically follows new followers.
   * TWITTER_ACCESS_TOKEN_SECRET
   * TWITTER_CONSUMER_API_KEY
   * TWITTER_CONSUMER_API_SECRET
-* **verify that these environment variables are set correctly** Execute the [test-auth.py](https://github.com/james-flynn-ie/py-twitter-bot/blob/master/test-auth.py) script from the CLI using:
+* **Verify that these environment variables are set correctly** by executing the [test-auth.py](https://github.com/james-flynn-ie/py-twitter-bot/blob/master/test-auth.py) script from the CLI:
 
 ```bash
     python ./test-auth.py
