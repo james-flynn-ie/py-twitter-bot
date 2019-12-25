@@ -1,11 +1,14 @@
 import tweepy
 import os
 
-MANDATORY_ENV_VARS = ["TWITTER_CONSUMER_API_KEY", "TWITTER_CONSUMER_API_SECRET", "TWITTER_ACCESS_TOKEN", "TWITTER_ACCESS_TOKEN_SECRET"]
+def verify_env_vars():
+  MANDATORY_ENV_VARS = ["TWITTER_CONSUMER_API_KEY", "TWITTER_CONSUMER_API_SECRET", "TWITTER_ACCESS_TOKEN", "TWITTER_ACCESS_TOKEN_SECRET"]
+  
+  for env_var in MANDATORY_ENV_VARS:
+    if env_var not in os.environ:
+      raise EnvironmentError("{} not found. Twitter App keys must be set as environment variables.".format(env_var))
 
-for env_var in MANDATORY_ENV_VARS:
-  if env_var not in os.environ:
-    raise EnvironmentError("{} not found. Twitter App keys must be set as environment variables.".format(env_var))
+verify_env_vars()
 
 auth = tweepy.OAuthHandler(os.environ['TWITTER_CONSUMER_API_KEY'], 
     os.environ['TWITTER_CONSUMER_API_SECRET'])
