@@ -1,5 +1,5 @@
-import tweepy
 import os
+import tweepy
 
 def check_env_vars_exist():
   MANDATORY_ENV_VARS = ["TWITTER_CONSUMER_API_KEY", "TWITTER_CONSUMER_API_SECRET", "TWITTER_ACCESS_TOKEN", "TWITTER_ACCESS_TOKEN_SECRET"]
