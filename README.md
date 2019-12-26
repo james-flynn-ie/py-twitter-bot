@@ -14,7 +14,7 @@ The bot automatically follows new followers.
   * _Application Description_: A short description about what the app does.
   * _Website URL_: The URL will be referenced by the app when posting, so any personal website will do.
   * _Tell us how this app will be used_: This is used by Twitter staff to see if you will follow their [restricted usage policies](https://developer.twitter.com/en/developer-terms/more-on-restricted-use-cases). I stated that the app was an 'Application for automatically following users who follow me.'
-* **Generate an access token and secret for the App.** Make a note of the token and secret values, along with the consumer API and secret keys, as they are used in the next step.
+* **Generate an access token and secret for the App.** Make a note of the token and secret values, along with the consumer API and secret keys, as they are used when configuring the runtime environment.
 
 ### Clone the py-twitter-bot Git repository
 
