@@ -6,7 +6,7 @@ The bot automatically follows new followers.
 
 ## Configuration
 
-### Create Twitter App
+### Create A Twitter App
 
 * **Create a Twitter Developer's Account:** [https://developer.twitter.com/en/apply-for-access](https://developer.twitter.com/en/apply-for-access)
 * **Create an App in your Twitter Developer's account.** You can leave most of the fields blank, but you must complete the following mandatory fields:
@@ -16,12 +16,16 @@ The bot automatically follows new followers.
   * _Tell us how this app will be used_: This is used by Twitter staff to see if you will follow their [restricted usage policies](https://developer.twitter.com/en/developer-terms/more-on-restricted-use-cases). I stated that the app was an 'Application for automatically following users who follow me.'
 * **Generate an access token and secret for the App.** Make a note of the token and secret values, along with the consumer API and secret keys, as they are used in the next step.
 
+### Clone the py-twitter-bot Git repository
+
+* **[git clone](https://git-scm.com/docs/git-clone) the [py-twitter-bot](https://github.com/james-flynn-ie/py-twitter-bot) repository.**
+
 ### Set Up Python Environment
 
 * **[Install Python 3](https://www.python.org/downloads/), if not already installed.**
 * **[Install pip](https://pip.pypa.io/en/stable/installing/#installing-with-get-pip-py), if not already installed.** 
 * **[Install Virtualenv](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/).**
-* **Change to the cloned directory, and [create a virtual environment](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/#creating-a-virtual-environment).**
+* **Change to the directory containing the cloned py-twitter-bot repository, and [create a virtual environment](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/#creating-a-virtual-environment).**
 * **Prior to running any Python commands in the directory, [run the virtualenv activate script to launch the virtual environment](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/#activating-a-virtual-environment).**
 
 ### Configure Runtime Environment
@@ -31,6 +35,10 @@ The bot automatically follows new followers.
   * TWITTER_ACCESS_TOKEN_SECRET
   * TWITTER_CONSUMER_API_KEY
   * TWITTER_CONSUMER_API_SECRET
+* **Run the following command in the cloned directory:** This will install the Python dependencies required by py-twitter-bot:
+```bash
+   pip install -r requirements.txt
+```
 * **Verify that these environment variables are set correctly** by executing the [test-auth.py](https://github.com/james-flynn-ie/py-twitter-bot/blob/master/test-auth.py) script from the CLI:
 
 ```bash
