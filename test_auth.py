@@ -1,4 +1,4 @@
-import create_api
+from create_api import set_auth
 import os
 import tweepy
 
@@ -15,10 +15,10 @@ def check_env_vars_exist():
 def main():
   check_env_vars_exist()
 
-  auth = create_api.set_auth(os.environ['TWITTER_CONSUMER_API_KEY'],
-                             os.environ['TWITTER_CONSUMER_API_SECRET'],
-                             os.environ['TWITTER_ACCESS_TOKEN'],
-                             os.environ['TWITTER_ACCESS_TOKEN_SECRET'])
+  auth = set_auth(os.environ['TWITTER_CONSUMER_API_KEY'],
+                  os.environ['TWITTER_CONSUMER_API_SECRET'],
+                  os.environ['TWITTER_ACCESS_TOKEN'],
+                  os.environ['TWITTER_ACCESS_TOKEN_SECRET'])
 
   api = tweepy.API(auth)
   
