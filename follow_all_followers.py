@@ -5,7 +5,7 @@ import time
 import tweepy
 
 logger = logging.getLogger(__name__)
-logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
+logging.basicConfig(stream=sys.stdout, level=logging.INFO)
 
 def follow_followers(api):
     logger.info("Retrieving list of followers")
