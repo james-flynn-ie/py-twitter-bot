@@ -10,7 +10,7 @@ def set_auth(consumer_key, consumer_secret, access_token, access_token_secret):
 
     return auth
 
-def create_api():
+def main():
     auth = set_auth(os.environ['TWITTER_CONSUMER_API_KEY'],
                     os.environ['TWITTER_CONSUMER_API_SECRET'],
                     os.environ['TWITTER_ACCESS_TOKEN'],
@@ -28,4 +28,4 @@ def create_api():
     return api
 
 if __name__ == '__main__':
-    create_api()
+    main()
