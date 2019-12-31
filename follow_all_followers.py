@@ -12,12 +12,12 @@ def follow_followers(api):
 
     try:
         for follower in tweepy.Cursor(api.followers).items():
-            logger.debug(f"Checking if {follower.name} is being followed yet")
+            logger.debug(f"Checking if {follower.name} is being followed yet.")
             if not follower.following:
-                logger.info(f"Following {follower.name}")
+                logger.info(f"Following {follower.name}.")
                 follower.follow()
     except Exception as e:
-        logger.error(f"Failed to follow {follower.name}", exc_info=True)
+        logger.error(f"Failed to follow {follower.name}.", exc_info=True)
         raise e
 
     logger.info("Finished checking follower list!")
@@ -26,7 +26,7 @@ def main():
     seconds_between_checks = 900
 
     api = create_api.main()
-    
+
     while True:
         follow_followers(api)
         logger.debug(f"Waiting for {seconds_between_checks} seconds.")
