@@ -39,9 +39,9 @@ The bot automatically follows new followers.
 ```bash
    pip install -r requirements.txt
 ```
-* **Verify that the environment is configured correctly** by executing the [test-auth.py](https://github.com/james-flynn-ie/py-twitter-bot/blob/master/test-auth.py) script from the CLI:
+* **Verify that the environment is configured correctly** by executing the [test_auth.py](https://github.com/james-flynn-ie/py-twitter-bot/blob/master/test_auth.py) script from the CLI:
 
 ```bash
-    python ./test-auth.py
+    python ./test_auth.py
 ```
 If you see the message, "Authentication OK" then you are all set!
