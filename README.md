@@ -23,7 +23,7 @@ The bot automatically follows new followers.
 ### Set Up Python Environment
 
 * **[Install Python 3](https://www.python.org/downloads/), if not already installed.**
-* **[Install pip](https://pip.pypa.io/en/stable/installing/#installing-with-get-pip-py), if not already installed.** 
+* **[Install pip](https://pip.pypa.io/en/stable/installing/#installing-with-get-pip-py), if not already installed.**
 * **[Install Virtualenv](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/).**
 * **Change to the directory containing the cloned py-twitter-bot repository, and [create a virtual environment](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/#creating-a-virtual-environment).**
 * **Prior to running any Python commands in the directory, [run the virtualenv activate script to launch the virtual environment](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/#activating-a-virtual-environment).**
@@ -35,13 +35,17 @@ The bot automatically follows new followers.
   * TWITTER_ACCESS_TOKEN_SECRET
   * TWITTER_CONSUMER_API_KEY
   * TWITTER_CONSUMER_API_SECRET
+
 * **Run the following command in the cloned directory:** This will install the Python dependencies required by py-twitter-bot:
+
 ```bash
    pip install -r requirements.txt
 ```
+
 * **Verify that the environment is configured correctly** by executing the [test_auth.py](https://github.com/james-flynn-ie/py-twitter-bot/blob/master/test_auth.py) script from the CLI:
 
 ```bash
     python ./test_auth.py
 ```
+
 If you see the message, "Authentication OK" then you are all set!
