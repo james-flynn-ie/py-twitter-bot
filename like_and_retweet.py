@@ -14,7 +14,7 @@ class likeRTListener(tweepy.StreamListener):
         self.me = api.me()
 
     def on_status(self, tweet):
-        logger.info(f"Processing tweet id {tweet.id}")
+        logger.info(f"Liking and RTing id# {tweet.id}")
         if tweet.in_reply_to_status_id is not None or \
             tweet.user.id == self.me.id:
                 # We don't do anything if a tweet is either:
@@ -32,7 +32,7 @@ class likeRTListener(tweepy.StreamListener):
             try:
                 tweet.retweet()
             except Exception as e:
-                logger.error(f"failed to Retweet id# {tweet.id}", exc_info=True)
+                logger.error(f"Failed to Retweet id# {tweet.id}", exc_info=True)
 
     def on_error(self, status):
         logger.error(status)
