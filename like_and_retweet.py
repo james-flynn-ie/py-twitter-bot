@@ -17,9 +17,9 @@ class likeRTListener(tweepy.StreamListener):
         logger.info(f"Processing tweet id {tweet.id}")
         if tweet.in_reply_to_status_id is not None or \
             tweet.user.id == self.me.id:
-                # We don't do anything if a tweet is:
-                #   - Written by the Twitter account user
-                #   - A reply to one of their tweets.
+                # We don't do anything if a tweet is either:
+                #   - Written by the Twitter account user.
+                #   - A reply to one of the Twitter account user's tweets.
             return
 
         if not tweet.favorited:
@@ -41,9 +41,11 @@ def main(keywords):
     api = create_api.main()
     tweets_listener = likeRTListener(api)
     stream = tweepy.Stream(api.auth, tweets_listener)
+
+    logger.info(f"Filtering by keywords {keywords}")
     stream.filter(track=keywords, languages=["en"])
 
 if __name__ == "__main__":
-    # Each keyword represents an 'OR' condition. 
+    # Each keyword represents an 'OR' condition.
     # Choose the list carefully as it can get spammy very quickly!
     main(["DevOps", "SRE"])
