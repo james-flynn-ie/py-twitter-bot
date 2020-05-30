@@ -49,3 +49,35 @@ The bot automatically follows new followers.
 ```
 
 If you see the message, "Authentication OK" then you are all set!
+
+### Run Application
+
+#### follow_all_followers.py
+
+* **Description**
+
+follow_all_followers checks if you are already following all of the Twitter users who are your followers. Once the script has checked your entire list of followers, then it waits 15 minutes and then checks again.
+
+* **Usage**
+
+```bash
+python follow_all_followers.py
+```
+
+#### like_and_retweet.py
+
+* **Description**
+
+like_and_retweet performas a search for keywords specified in like_and_retweet:main(). It then likes and retweets everything returned as search results.
+
+**Caution**: The number of likes and retweets can be quite large and spammy if the keywords are too vague. Please consider improving the list with more specific keywords before running!
+
+```python
+main(["DevOps", "SRE"])
+```
+
+* **Usage**
+
+```bash
+python like_and_retweet.py
+```
