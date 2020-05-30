@@ -50,33 +50,36 @@ The bot automatically follows new followers.
 
 If you see the message, "Authentication OK" then you are all set!
 
-### Run Application
+## Run Application
 
-#### follow_all_followers.py
+### follow_all_followers.py
 
-* **Description**
+#### Description
 
-follow_all_followers checks if you are already following all of the Twitter users who are your followers. Once the script has checked your entire list of followers, then it waits 15 minutes and then checks again.
+[follow_all_followers.py](https://github.com/james-flynn-ie/py-twitter-bot/blob/master/follow_all_followers.py) checks if you are already following all of the Twitter users who are your followers. Once the script has checked your entire list of followers, then it waits 15 minutes and then checks again.
 
-* **Usage**
+#### Usage
 
 ```bash
 python follow_all_followers.py
 ```
 
-#### like_and_retweet.py
+### like_and_retweet.py
 
-* **Description**
+#### Description
 
-like_and_retweet performas a search for keywords specified in like_and_retweet:main(). It then likes and retweets everything returned as search results.
+like_and_retweet performas a search for keywords specified in [like_and_retweet.py](https://github.com/james-flynn-ie/py-twitter-bot/blob/master/like_and_retweet.py). It then likes and retweets everything returned as search results.
 
-**Caution**: The number of likes and retweets can be quite large and spammy if the keywords are too vague. Please consider improving the list with more specific keywords before running!
+**Caution**: The number of likes and retweets can be quite large and spammy if the keywords are too vague. Please consider improving the list with more specific keywords before running! To improve the search, update this list of words in [like_and_retweet.py](https://github.com/james-flynn-ie/py-twitter-bot/blob/master/like_and_retweet.py#L51):
 
 ```python
-main(["DevOps", "SRE"])
+if __name__ == "__main__":
+    # Each keyword represents an 'OR' condition.
+    # Choose the list carefully as it can get spammy very quickly!
+    main(["DevOps", "SRE"])
 ```
 
-* **Usage**
+#### Usage
 
 ```bash
 python like_and_retweet.py
