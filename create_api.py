@@ -6,11 +6,13 @@ import tweepy
 logger = logging.getLogger(__name__)
 logging.basicConfig(stream=sys.stdout, level=logging.INFO)
 
+
 def set_auth(consumer_key, consumer_secret, access_token, access_token_secret):
     auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(access_token, access_token_secret)
 
     return auth
+
 
 def main():
     auth = set_auth(os.environ['TWITTER_CONSUMER_API_KEY'],
@@ -30,6 +32,7 @@ def main():
 
     logger.info("API created")
     return api
+
 
 if __name__ == '__main__':
     main()
