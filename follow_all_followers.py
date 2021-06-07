@@ -7,6 +7,7 @@ import tweepy
 logger = logging.getLogger(__name__)
 logging.basicConfig(stream=sys.stdout, level=logging.INFO)
 
+
 def follow_followers(api):
     logger.info("Checking list of followers.")
 
@@ -23,6 +24,7 @@ def follow_followers(api):
 
     logger.info("Finished checking follower list!")
 
+
 def main():
     seconds_between_checks = 900
 
@@ -33,6 +35,7 @@ def main():
 
         logger.debug(f"Waiting for {seconds_between_checks} seconds.")
         time.sleep(seconds_between_checks)
+
 
 if __name__ == "__main__":
     main()
