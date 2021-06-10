@@ -30,7 +30,7 @@ def main():
     try:
         api.verify_credentials()
         print("Authentication OK")
-    except:
+    except Exception:
         print("Authentication failed." +
               "\nCheck that you have set the correct Consumer API " +
               "and Access Token key values.")
