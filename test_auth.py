@@ -1,20 +1,6 @@
-from create_api import set_auth
+from create_api import set_auth, check_env_vars_exist
 import os
 import tweepy
-
-
-def check_env_vars_exist():
-    MANDATORY_ENV_VARS = ["TWITTER_CONSUMER_API_KEY",
-                          "TWITTER_CONSUMER_API_SECRET",
-                          "TWITTER_ACCESS_TOKEN",
-                          "TWITTER_ACCESS_TOKEN_SECRET"]
-
-    for env_var in MANDATORY_ENV_VARS:
-        if env_var not in os.environ:
-            raise EnvironmentError(
-                "{} not found. Set Twitter App keys as environment variables."
-                .format(env_var)
-                )
 
 
 def main():
@@ -30,7 +16,7 @@ def main():
     try:
         api.verify_credentials()
         print("Authentication OK")
-    except:
+    except Exception:
         print("Authentication failed." +
               "\nCheck that you have set the correct Consumer API " +
               "and Access Token key values.")
