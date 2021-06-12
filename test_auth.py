@@ -1,5 +1,7 @@
 from create_api import set_auth, check_env_vars_exist
+import errno
 import os
+import sys
 import tweepy
 
 
@@ -21,6 +23,7 @@ def main():
         print("\nAuthentication failed." +
               "\nCheck that you have set the correct Consumer API " +
               "and Access Token key values.")
+        sys.exit(errno.EACCES)  # Set exit code using errno
 
 
 if __name__ == "__main__":
