@@ -1,4 +1,5 @@
 import logging
+import errno
 import os
 import sys
 import tweepy
@@ -15,10 +16,9 @@ def check_env_vars_exist():
 
     for env_var in MANDATORY_ENV_VARS:
         if env_var not in os.environ:
-            raise EnvironmentError(
-                "{} not found. Set Twitter App keys as environment variables."
-                .format(env_var)
-                )
+            logger.error("{} not found. ".format(env_var) +
+                         "Set Twitter App keys as environment variables.")
+            sys.exit(errno.EINVAL)
 
 
 def set_auth(consumer_key, consumer_secret, access_token, access_token_secret):
