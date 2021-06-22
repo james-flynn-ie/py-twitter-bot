@@ -19,7 +19,7 @@ def follow_followers(api):
                 logger.info(f"Following {follower.name}.")
                 follower.follow()
     except Exception as e:
-        logger.error(f"Failed to follow {follower.name}.", exc_info=True)
+        logger.exception(f"Failed to follow {follower.name}.", exc_info=True)
         raise e
 
     logger.info("Finished checking follower list!")

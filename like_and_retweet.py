@@ -27,15 +27,15 @@ class likeRTListener(tweepy.StreamListener):
             try:
                 tweet.favorite()
             except Exception:
-                logger.error(f"Failed to Like id# {tweet.id}",
-                             exc_info=True)
+                logger.exception(f"Failed to Like id# {tweet.id}",
+                                 exc_info=True)
 
         if not tweet.retweeted:
             try:
                 tweet.retweet()
             except Exception:
-                logger.error(f"Failed to Retweet id# {tweet.id}",
-                             exc_info=True)
+                logger.exception(f"Failed to Retweet id# {tweet.id}",
+                                 exc_info=True)
 
     def on_error(self, status):
         logger.error(status)
